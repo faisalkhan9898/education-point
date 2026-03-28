@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, MessageCircle, BookOpen } from 'lucide-react';
+import logo from '../assets/logo.jpeg';
 
 const Footer = () => {
   const socialLinks = [
@@ -31,13 +32,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo and Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-white p-2 rounded-lg">
-                <BookOpen className="text-primary" size={24} />
-              </div>
-              <span className="text-2xl font-bold">
-                Education <span className="text-secondary">Point</span>
-              </span>
+            <Link to="/" className="inline-block">
+              <img 
+                src={logo} 
+                alt="Education Point Logo" 
+                className="h-16 w-auto object-contain rounded-lg bg-white p-1 hover:scale-105 transition-transform duration-300"
+              />
             </Link>
             <p className="text-blue-100 leading-relaxed">
               Empowering students to achieve their dreams through quality education and expert guidance. Join us to start your journey to success.
@@ -104,7 +104,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin className="text-secondary flex-shrink-0" size={20} />
-                <span className="text-blue-100">123 Education Hub, Knowledge Park, Delhi, India</span>
+                <span className="text-blue-100">Shop No. 3-4, Param Arcade, Beside Darul Falah Masjid, Degam Road Karvad Vapi</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="text-secondary flex-shrink-0" size={20} />

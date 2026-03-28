@@ -25,9 +25,9 @@ const Contact = () => {
   };
 
   const contactOptions = [
-    { icon: Phone, title: 'Call Us', detail: '+91 98765 43210', sub: 'Mon-Sat (9am - 7pm)' },
+    { icon: Phone, title: 'Call Us', detail: '+91 9725579155', sub: 'Mon-Sat (9am - 7pm)' },
     { icon: Mail, title: 'Email Us', detail: 'info@educationpoint.com', sub: 'Response within 24h' },
-    { icon: MapPin, title: 'Visit Us', detail: '123 Education Hub, Delhi', sub: 'Near knowledge metro' },
+    { icon: MapPin, title: 'Visit Us', detail: 'Shop No. 3-4, Param Arcade', sub: 'Beside Darul Falah Masjid, Degam Road Karvad Vapi' },
   ];
 
   return (
@@ -173,7 +173,7 @@ const Contact = () => {
               <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-[450px] border-8 border-white">
                 <iframe
                   title="Education Point Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0123456789!2d77.1234567!3d28.6543210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd123456789%3A0xabcdef123456789!2sDelhi!5e0!3m2!1sen!2sin!4v1234567890123"
+                  src="https://www.google.com/maps?q=Shop+No.+3-4,+Param+Arcade,+Beside+Darul+Falah+Masjid,+Degam+Road,+Karvad,+Vapi,+Gujarat&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -181,7 +181,7 @@ const Contact = () => {
                   loading="lazy"
                 ></iframe>
               </div>
-              
+
               <div className="bg-primary text-white p-10 rounded-[2.5rem]">
                 <h4 className="text-2xl font-bold mb-6 flex items-center gap-3">
                   Our Headquarters
@@ -190,7 +190,7 @@ const Contact = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <MapPin className="text-secondary shrink-0" size={24} />
-                    <p className="text-lg opacity-90">123, Education Hub, Knowledge Square, Sector 15, Delhi, 110001, India</p>
+                    <p className="text-lg opacity-90">Shop No. 3-4, Param Arcade, Beside Darul Falah Masjid, Degam Road Karvad Vapi</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Clock className="text-secondary shrink-0" size={24} />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, BookOpen, Phone, Info, Home, Image as ImageIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/logo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +31,12 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-primary p-2 rounded-lg">
-              <BookOpen className="text-secondary" size={24} />
-            </div>
-            <span className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-primary'}`}>
-              Education <span className="text-secondary-dark">Point</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Education Point Logo" 
+              className="h-12 w-auto object-contain hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Nav */}
