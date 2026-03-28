@@ -1,8 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, BookOpen } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, MessageCircle, BookOpen } from 'lucide-react';
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      icon: Facebook,
+      url: "https://www.facebook.com/educationpoint"
+    },
+    {
+      icon: Twitter,
+      url: "https://twitter.com/yourusername"
+    },
+    {
+      icon: Instagram,
+      url: "https://www.instagram.com/yourusername"
+    },
+    {
+      icon: Linkedin,
+      url: "https://www.linkedin.com/in/yourname"
+    },
+    {
+      icon: MessageCircle,
+      url: "https://wa.me/919725579155"
+    }
+  ];
   return (
     <footer className="bg-primary text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +43,7 @@ const Footer = () => {
               Empowering students to achieve their dreams through quality education and expert guidance. Join us to start your journey to success.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+              {/* {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
                 <a
                   key={index}
                   href="#"
@@ -29,7 +51,20 @@ const Footer = () => {
                 >
                   <Icon size={20} />
                 </a>
-              ))}
+              ))} */}
+              {socialLinks.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={index}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -73,7 +108,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="text-secondary flex-shrink-0" size={20} />
-                <span className="text-blue-100">+91 98765 43210</span>
+                <span className="text-blue-100">+91 9725579155</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="text-secondary flex-shrink-0" size={20} />
